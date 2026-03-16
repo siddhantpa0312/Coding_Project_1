@@ -1,0 +1,57 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <title>User Feedback Form</title>
+    <link rel="stylesheet" href="style.css">
+</head>
+
+<body>
+
+    <div id="tooltip" class="tooltip"></div>
+
+    <h1>User Feedback Form</h1>
+
+    <form id="feedbackForm">
+
+        <div class="form-group" data-tooltip="Enter your full name.">
+            <label for="name">Name:</label>
+            <input type="text" id="name" autocomplete="off">
+            <span class="validation-msg" id="nameErr"></span>
+        </div>
+
+        <div class="form-group" data-tooltip="Enter a valid email address.">
+            <label for="email">Email:</label>
+            <input type="email" id="email" autocomplete="off">
+            <span class="validation-msg" id="emailErr"></span>
+        </div>
+
+        <div class="form-group" data-tooltip="Share your feedback (max 600 characters).">
+            <label for="feedback">Feedback:</label>
+
+            <textarea
+                id="feedback"
+                rows="5"
+                maxlength="600"
+                placeholder="Write your feedback..."
+            ></textarea>
+
+            <div class="counter-row">
+                <span class="validation-msg" id="feedbackErr"></span>
+                <span id="charCount">0 / 600</span>
+            </div>
+
+        </div>
+
+        <button type="submit">Submit Feedback</button>
+
+    </form>
+
+    <div id="feedback-display"></div>
+
+    <script src="cp_1.js"></script>
+
+</body>
+
+</html>
